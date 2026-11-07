@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Viés e Transparência em IA</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header>
+
+        <h1>DILEMA DIGITAL</h1>
+
+        <p>
+            A influência da IA na disseminação de informações falsas
+            e a falta de verificação das fontes
+        </p>
+
+    </header>
+
+
+    <main>
+
+        <!-- PERGUNTA -->
+
+        <section>
+
+            <h2>Pergunta</h2>
+
+            <p>
+                Você costuma verificar se uma informação gerada por IA
+                é verdadeira antes de compartilhá-la?
+            </p>
+
+        </section>
+
+
+        <!-- HIPÓTESE -->
+
+        <section>
+
+            <h2>Hipótese</h2>
+
+            <p>
+                Acreditamos que a facilidade de criar conteúdos com IA
+                faz com que muitas pessoas confiem nas informações sem
+                confirmar sua veracidade, aumentando o risco de espalhar
+                notícias falsas.
+            </p>
+
+        </section>
+
+
+        <!-- DASHBOARD -->
+
+        <section class="dashboard">
+
+            <h2>Dashboard da pesquisa</h2>
+
+
+            <!-- FILTRO -->
+
+            <label for="filtro">
+                Filtrar por pergunta:
+            </label>
+
+            <select id="filtro">
+
+                <option value="0">
+                    Você já compartilhou alguma notícia ou informação
+                    por confiar no conteúdo gerado por IA sem verificar a fonte?
+                </option>
+
+                <option value="2">
+                    Você confia nas decisões da IA?
+                </option>
+
+            </select>
+
+
+            <!-- GRÁFICOS -->
+
+            <div class="graficos">
+
+                <!-- GRÁFICO DE BARRAS -->
+
+                <div class="grafico">
+
+                    <h3>Quantidade de respostas</h3>
+
+                    <canvas id="graficoBarras"></canvas>
+
+                </div>
+
+
+                <!-- GRÁFICO DE ROSCA -->
+
+                <div class="grafico">
+
+                    <h3>Distribuição das respostas</h3>
+
+                    <canvas id="graficoRosca"></canvas>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONCLUSÃO DA PESQUISA -->
+
+        <section class="conclusao">
+
+            <div class="titulo-final">
+
+                <span class="icone-final">✓</span>
+
+                <div>
+                    <span class="subtitulo-final">
+                        RESULTADOS DA INVESTIGAÇÃO
+                    </span>
+
+                    <h2>Conclusão da pesquisa</h2>
+                </div>
+
+            </div>
+
+            <p>
+                A pesquisa evidencia a importância de verificar as
+                informações produzidas e compartilhadas na internet.
+                A inteligência artificial facilita a criação de conteúdos,
+                mas nem sempre as informações apresentadas são verdadeiras.
+                Por isso, é fundamental consultar fontes confiáveis e
+                analisar os conteúdos antes de acreditar ou compartilhar.
+            </p>
+
+            <div class="destaque-final">
+                Antes de compartilhar, verifique. Nem tudo o que parece
+                verdadeiro realmente é.
+            </div>
+
+        </section>
+
+
+        <!-- VERIFICAÇÃO CRÍTICA DA IA -->
+
+        <section class="verificacao-ia">
+
+            <div class="titulo-final">
+
+                <span class="icone-final ia-icon">🤖</span>
+
+                <div>
+
+                    <span class="subtitulo-final">
+                        PENSAMENTO CRÍTICO
+                    </span>
+
+                    <h2>Verificação crítica da IA</h2>
+
+                </div>
+
+            </div>
+
+            <p>
+                A inteligência artificial pode auxiliar na interpretação
+                dos resultados, mas suas respostas não devem ser aceitas
+                sem questionamento. Consideramos importante comparar
+                as informações apresentadas pela IA com os dados
+                coletados na pesquisa, verificando se suas interpretações
+                realmente correspondem às respostas dos participantes.
+            </p>
+
+            <div class="destaque-final">
+                A IA pode ajudar a interpretar informações, mas a
+                responsabilidade de verificar e questionar continua sendo nossa.
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <p>Yarla</p>
+
+        <span>
+            Informação responsável começa com a verificação.
+        </span>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
