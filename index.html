@@ -8,46 +8,32 @@
     <title>Viés e Transparência em IA</title>
 
     <link rel="stylesheet" href="style.css">
-
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
-    <!-- CABEÇALHO -->
-
     <header>
-
         <h1>DILEMA DIGITAL</h1>
 
         <p>
             A influência da IA na disseminação de informações falsas
             e a falta de verificação das fontes
         </p>
-
     </header>
-
 
     <main>
 
-        <!-- PERGUNTA -->
-
         <section>
-
             <h2>Pergunta</h2>
 
             <p>
                 Você costuma verificar se uma informação gerada por IA
                 é verdadeira antes de compartilhá-la?
             </p>
-
         </section>
 
-
-        <!-- HIPÓTESE -->
-
         <section>
-
             <h2>Hipótese</h2>
 
             <p>
@@ -56,68 +42,107 @@
                 confirmar sua veracidade, aumentando o risco de espalhar
                 notícias falsas.
             </p>
-
         </section>
 
-
-        <!-- DASHBOARD -->
+        <!-- PRIMEIRA PERGUNTA -->
 
         <section class="dashboard">
 
-            <h2>Dashboard da pesquisa</h2>
+            <h2>Resultados da pesquisa</h2>
 
+            <div class="pergunta-dashboard">
+                <span class="numero-pergunta">01</span>
 
-            <!-- FILTRO -->
+                <div>
+                    <h3>Compartilhamento de informações</h3>
 
-            <label for="filtro">
-                Filtrar por pergunta:
-            </label>
-
-            <select id="filtro">
-
-                <option value="0">
-                    Você já compartilhou alguma notícia ou informação
-                    por confiar no conteúdo gerado por IA sem verificar a fonte?
-                </option>
-
-                <option value="2">
-                    Você confia nas decisões da IA?
-                </option>
-
-            </select>
-
-
-            <!-- GRÁFICOS -->
+                    <p>
+                        Você já compartilhou alguma notícia ou informação
+                        por confiar no conteúdo gerado por IA sem verificar a fonte?
+                    </p>
+                </div>
+            </div>
 
             <div class="graficos">
 
-                <!-- GRÁFICO DE BARRAS -->
-
                 <div class="grafico">
-
                     <h3>Quantidade de respostas</h3>
-
-                    <canvas id="graficoBarras"></canvas>
-
+                    <canvas id="graficoBarras1"></canvas>
                 </div>
 
-
-                <!-- GRÁFICO DE ROSCA -->
-
                 <div class="grafico">
-
                     <h3>Distribuição das respostas</h3>
-
-                    <canvas id="graficoRosca"></canvas>
-
+                    <canvas id="graficoRosca1"></canvas>
                 </div>
 
             </div>
 
         </section>
 
+        <!-- SEGUNDA PERGUNTA -->
 
-        <!-- CONCLUSÃO DA PESQUISA -->
+        <section class="dashboard">
+
+            <div class="pergunta-dashboard">
+                <span class="numero-pergunta">02</span>
+
+                <div>
+                    <h3>Confiança nas decisões da IA</h3>
+
+                    <p>
+                        Você confia nas decisões da IA?
+                    </p>
+                </div>
+            </div>
+
+            <!-- FILTRO EXCLUSIVO DA SEGUNDA PERGUNTA -->
+
+            <div class="area-filtro">
+
+                <label for="filtroResultados">
+                    Filtrar visualização dos resultados:
+                </label>
+
+                <select id="filtroResultados">
+
+                    <option value="todos">
+                        Todas as respostas
+                    </option>
+
+                    <option value="destaque">
+                        Destacar resposta mais escolhida
+                    </option>
+
+                </select>
+
+                <small>
+                    Utilize o filtro para observar a resposta predominante
+                    e compará-la com as demais.
+                </small>
+
+            </div>
+
+            <div class="graficos">
+
+                <div class="grafico">
+                    <h3>Quantidade de respostas</h3>
+                    <canvas id="graficoBarras2"></canvas>
+                </div>
+
+                <div class="grafico">
+                    <h3>Distribuição das respostas</h3>
+                    <canvas id="graficoRosca2"></canvas>
+                </div>
+
+            </div>
+
+            <div class="analise-filtro" id="analiseFiltro">
+                Selecione uma opção do filtro para analisar os resultados.
+            </div>
+
+        </section>
+
+        <!-- CONCLUSÃO -->
 
         <section class="conclusao">
 
@@ -150,7 +175,6 @@
             </div>
 
         </section>
-
 
         <!-- VERIFICAÇÃO CRÍTICA DA IA -->
 
@@ -188,11 +212,7 @@
 
         </section>
 
-
     </main>
-
-
-    <!-- RODAPÉ -->
 
     <footer>
 
@@ -203,9 +223,6 @@
         </span>
 
     </footer>
-
-
-    <!-- JAVASCRIPT -->
 
     <script src="script.js"></script>
 

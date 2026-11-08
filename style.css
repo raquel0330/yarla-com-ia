@@ -1,5 +1,3 @@
-/* CONFIGURAÇÕES GERAIS */
-
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +9,6 @@ body {
     background: #fff7fa;
     color: #59434d;
 }
-
 
 /* CABEÇALHO */
 
@@ -28,24 +25,21 @@ header h1 {
 
 header p {
     color: #795967;
+    line-height: 1.5;
 }
 
-
-/* CONTEÚDO PRINCIPAL */
+/* CONTEÚDO */
 
 main {
-    max-width: 950px;
+    max-width: 1100px;
     margin: 30px auto;
     padding: 0 18px;
 }
 
-
-/* SEÇÕES */
-
 section {
     background: white;
-    padding: 24px;
-    margin-bottom: 18px;
+    padding: 25px;
+    margin-bottom: 20px;
     border-radius: 13px;
     border: 1px solid #f3dce5;
 }
@@ -57,9 +51,8 @@ h2 {
 }
 
 section p {
-    line-height: 1.6;
+    line-height: 1.7;
 }
-
 
 /* DASHBOARD */
 
@@ -67,16 +60,54 @@ section p {
     background: #fffafd;
 }
 
+.pergunta-dashboard {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.numero-pergunta {
+    background: #f5dce7;
+    color: #a65377;
+    font-size: 20px;
+    font-weight: bold;
+    min-width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pergunta-dashboard h3 {
+    color: #795967;
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.pergunta-dashboard p {
+    font-size: 14px;
+}
 
 /* FILTRO */
 
-label {
-    display: block;
-    margin: 20px 0 8px;
-    font-weight: bold;
+.area-filtro {
+    background: #fff0f6;
+    border: 1px solid #efc3d5;
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 25px;
 }
 
-select {
+.area-filtro label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #795967;
+}
+
+.area-filtro select {
     width: 100%;
     padding: 13px;
     border: 1px solid #e7b6c9;
@@ -87,11 +118,16 @@ select {
     cursor: pointer;
 }
 
-select:focus {
-    outline: none;
-    border-color: #bd7893;
+.area-filtro select:focus {
+    outline: 2px solid #bd7893;
 }
 
+.area-filtro small {
+    display: block;
+    margin-top: 10px;
+    color: #896b78;
+    line-height: 1.5;
+}
 
 /* GRÁFICOS */
 
@@ -99,12 +135,11 @@ select:focus {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    margin-top: 25px;
 }
 
 .grafico {
     background: white;
-    padding: 18px;
+    padding: 20px;
     border-radius: 12px;
     border: 1px solid #f3dce5;
     min-width: 0;
@@ -112,25 +147,33 @@ select:focus {
 
 .grafico h3 {
     font-size: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
     color: #795967;
 }
 
+.grafico canvas {
+    max-width: 100%;
+}
 
-/* =====================================
-   CONCLUSÃO DA PESQUISA
-===================================== */
+/* ANÁLISE DO FILTRO */
+
+.analise-filtro {
+    background: #fcebf2;
+    border-left: 4px solid #bd7893;
+    padding: 16px;
+    margin-top: 20px;
+    border-radius: 7px;
+    color: #795967;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* CONCLUSÃO */
 
 .conclusao {
-    background: linear-gradient(
-        135deg,
-        #ffffff,
-        #fff2f7
-    );
-
+    background: linear-gradient(135deg, #ffffff, #fff2f7);
     border: 1px solid #f0cad9;
     border-left: 5px solid #bd7893;
-    padding: 26px;
 }
 
 .titulo-final {
@@ -146,10 +189,8 @@ select:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-
     background: #f8dce7;
     color: #a65377;
-
     border-radius: 12px;
     font-size: 23px;
     font-weight: bold;
@@ -182,35 +223,24 @@ select:focus {
     padding: 13px 16px;
     margin-top: 18px;
     border-radius: 7px;
-
     color: #795967;
     font-size: 13px;
     font-weight: bold;
     line-height: 1.6;
 }
 
-
-/* =====================================
-   VERIFICAÇÃO CRÍTICA DA IA
-===================================== */
+/* VERIFICAÇÃO DA IA */
 
 .verificacao-ia {
-    background: linear-gradient(
-        135deg,
-        #fffafd,
-        #fff0f5
-    );
-
+    background: linear-gradient(135deg, #fffafd, #fff0f5);
     border: 1px solid #efd3df;
     border-left: 5px solid #d58eaa;
-    padding: 26px;
 }
 
 .ia-icon {
     background: #f4dce8;
     color: #a65377;
 }
-
 
 /* RODAPÉ */
 
@@ -226,10 +256,9 @@ footer span {
     font-size: 12px;
 }
 
-
 /* RESPONSIVIDADE */
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
 
     .graficos {
         grid-template-columns: 1fr;
@@ -247,13 +276,8 @@ footer span {
         padding: 19px;
     }
 
-    .conclusao,
-    .verificacao-ia {
-        padding: 20px;
-    }
-
-    .titulo-final {
-        align-items: flex-start;
+    .pergunta-dashboard h3 {
+        font-size: 17px;
     }
 
 }
