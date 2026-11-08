@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Viés e Transparência em IA</title>
+    <title>Dilema Digital | Yarla</title>
 
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -24,23 +24,39 @@
 
     <main>
 
+        <!-- TEMA -->
+
         <section>
-            <h2>Pergunta</h2>
+            <h2>Tema da pesquisa</h2>
 
             <p>
-                Você costuma verificar se uma informação gerada por IA
-                é verdadeira antes de compartilhá-la?
+                A influência da inteligência artificial na divulgação
+                de informações falsas e no comportamento das pessoas
+                diante dos conteúdos gerados por essa tecnologia.
             </p>
         </section>
+
+        <!-- PERGUNTA -->
+
+        <section>
+            <h2>Pergunta da investigação</h2>
+
+            <p>
+                As pessoas confiam nas informações geradas por IA
+                e compartilham esses conteúdos sem verificar sua veracidade?
+            </p>
+        </section>
+
+        <!-- HIPÓTESE -->
 
         <section>
             <h2>Hipótese</h2>
 
             <p>
-                Acreditamos que a facilidade de criar conteúdos com IA
-                faz com que muitas pessoas confiem nas informações sem
-                confirmar sua veracidade, aumentando o risco de espalhar
-                notícias falsas.
+                A facilidade de criar conteúdos com IA faz com que
+                muitas pessoas confiem nas informações geradas pela
+                tecnologia sem confirmar sua veracidade, aumentando
+                o risco de disseminação de notícias falsas.
             </p>
         </section>
 
@@ -51,30 +67,60 @@
             <h2>Resultados da pesquisa</h2>
 
             <div class="pergunta-dashboard">
+
                 <span class="numero-pergunta">01</span>
 
                 <div>
-                    <h3>Compartilhamento de informações</h3>
+                    <h3>Confiança nas informações geradas por IA</h3>
 
                     <p>
-                        Você já compartilhou alguma notícia ou informação
-                        por confiar no conteúdo gerado por IA sem verificar a fonte?
+                        Você confia nas informações geradas por inteligência artificial?
                     </p>
                 </div>
+
+            </div>
+
+            <div class="area-filtro">
+
+                <label for="filtroConfianca">
+                    Filtrar visualização dos resultados:
+                </label>
+
+                <select id="filtroConfianca">
+
+                    <option value="todos">
+                        Todas as respostas
+                    </option>
+
+                    <option value="destaque">
+                        Destacar resposta mais escolhida
+                    </option>
+
+                </select>
+
+                <small>
+                    Observe a distribuição das respostas ou destaque
+                    a alternativa predominante.
+                </small>
+
             </div>
 
             <div class="graficos">
 
                 <div class="grafico">
-                    <h3>Quantidade de respostas</h3>
+                    <h3>Comparação percentual</h3>
                     <canvas id="graficoBarras1"></canvas>
                 </div>
 
                 <div class="grafico">
-                    <h3>Distribuição das respostas</h3>
+                    <h3>Distribuição percentual</h3>
                     <canvas id="graficoRosca1"></canvas>
                 </div>
 
+            </div>
+
+            <div class="analise-filtro" id="analiseConfianca">
+                Selecione uma opção do filtro para analisar os resultados.
             </div>
 
         </section>
@@ -84,18 +130,19 @@
         <section class="dashboard">
 
             <div class="pergunta-dashboard">
+
                 <span class="numero-pergunta">02</span>
 
                 <div>
-                    <h3>Confiança nas decisões da IA</h3>
+                    <h3>Compartilhamento de informações</h3>
 
                     <p>
-                        Você confia nas decisões da IA?
+                        Você já compartilhou alguma notícia ou informação
+                        gerada por IA sem verificar a fonte?
                     </p>
                 </div>
-            </div>
 
-            <!-- FILTRO EXCLUSIVO DA SEGUNDA PERGUNTA -->
+            </div>
 
             <div class="area-filtro">
 
@@ -116,8 +163,8 @@
                 </select>
 
                 <small>
-                    Utilize o filtro para observar a resposta predominante
-                    e compará-la com as demais.
+                    O filtro destaca visualmente a resposta predominante
+                    entre as alternativas.
                 </small>
 
             </div>
@@ -125,12 +172,12 @@
             <div class="graficos">
 
                 <div class="grafico">
-                    <h3>Quantidade de respostas</h3>
+                    <h3>Comparação percentual</h3>
                     <canvas id="graficoBarras2"></canvas>
                 </div>
 
                 <div class="grafico">
-                    <h3>Distribuição das respostas</h3>
+                    <h3>Distribuição percentual</h3>
                     <canvas id="graficoRosca2"></canvas>
                 </div>
 
@@ -139,6 +186,32 @@
             <div class="analise-filtro" id="analiseFiltro">
                 Selecione uma opção do filtro para analisar os resultados.
             </div>
+
+        </section>
+
+        <!-- JUSTIFICATIVA DOS GRÁFICOS -->
+
+        <section class="justificativa-graficos">
+
+            <div class="titulo-final">
+
+                <span class="icone-final">▥</span>
+
+                <div>
+                    <span class="subtitulo-final">
+                        REPRESENTAÇÃO DOS DADOS
+                    </span>
+
+                    <h2>Por que escolhi esses gráficos?</h2>
+                </div>
+
+            </div>
+
+            <p>
+                O gráfico de barras facilita a comparação entre as respostas,
+                enquanto o gráfico de rosca permite visualizar a proporção
+                percentual de cada alternativa.
+            </p>
 
         </section>
 
@@ -161,18 +234,46 @@
             </div>
 
             <p>
-                A pesquisa evidencia a importância de verificar as
-                informações produzidas e compartilhadas na internet.
-                A inteligência artificial facilita a criação de conteúdos,
-                mas nem sempre as informações apresentadas são verdadeiras.
-                Por isso, é fundamental consultar fontes confiáveis e
-                analisar os conteúdos antes de acreditar ou compartilhar.
+                Os resultados mostram que 27% dos participantes afirmaram
+                confiar nas informações geradas por IA, enquanto 38%
+                responderam talvez. Além disso, 59% afirmaram já ter
+                compartilhado informações geradas por essa tecnologia.
+                Esses dados reforçam a importância de desenvolver uma
+                postura crítica diante dos conteúdos digitais e verificar
+                as fontes antes de compartilhar informações.
             </p>
 
             <div class="destaque-final">
-                Antes de compartilhar, verifique. Nem tudo o que parece
-                verdadeiro realmente é.
+                A tecnologia pode criar informações, mas cabe a nós
+                decidir o que é verdadeiro. Antes de compartilhar, verifique!
             </div>
+
+        </section>
+
+        <!-- RELAÇÃO COM A HIPÓTESE -->
+
+        <section class="relacao-hipotese">
+
+            <div class="titulo-final">
+
+                <span class="icone-final">◎</span>
+
+                <div>
+                    <span class="subtitulo-final">
+                        ANÁLISE DOS RESULTADOS
+                    </span>
+
+                    <h2>Relação com a hipótese</h2>
+                </div>
+
+            </div>
+
+            <p>
+                A hipótese foi parcialmente confirmada. O filtro destacou
+                que 38% responderam talvez sobre confiar na IA e 59%
+                afirmaram já ter compartilhado conteúdos gerados por ela,
+                reforçando a necessidade de verificar as informações.
+            </p>
 
         </section>
 
@@ -185,32 +286,35 @@
                 <span class="icone-final ia-icon">🤖</span>
 
                 <div>
-
                     <span class="subtitulo-final">
                         PENSAMENTO CRÍTICO
                     </span>
 
                     <h2>Verificação crítica da IA</h2>
-
                 </div>
 
             </div>
 
             <p>
-                A inteligência artificial pode auxiliar na interpretação
-                dos resultados, mas suas respostas não devem ser aceitas
-                sem questionamento. Consideramos importante comparar
-                as informações apresentadas pela IA com os dados
-                coletados na pesquisa, verificando se suas interpretações
-                realmente correspondem às respostas dos participantes.
+                <strong>Verificação da IA:</strong>
+                A IA reforçou a importância de questionar as informações
+                geradas pela tecnologia.
             </p>
 
-            <div class="destaque-final">
-                A IA pode ajudar a interpretar informações, mas a
-                responsabilidade de verificar e questionar continua sendo nossa.
-            </div>
+            <p>
+                <strong>Opinião da estudante:</strong>
+                Concordamos, pois nem todo conteúdo produzido por IA é verdadeiro.
+            </p>
+
+            <p>
+                <strong>Evidência:</strong>
+                Os resultados mostram a presença de confiança e compartilhamento
+                de conteúdos gerados por IA.
+            </p>
 
         </section>
+
+
 
     </main>
 
